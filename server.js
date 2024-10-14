@@ -13,14 +13,14 @@ app.get('/', (req, res) => {
 });
 
 app.post('/submit', (req, res) => {
-    const { name, email } = req.body;
-    const data = `Name: ${name}, Email: ${email}\n`;
+    const {lastname, firstname, surname, email } = req.body;
+    const data = `ФИО: ${lastname} ${firstname} ${surname}, Email: ${email}\n`;
 
     fs.appendFile('data.txt', data, (err) => {
         if (err) {
-            return res.status(500).send('Error saving data');
+            return res.status(500).send('Ошибка сохранения данных');
         }
-        res.send('Data saved successfully!');
+        res.sendFile(path.join(__dirname, 'submit.html'));
     });
 });
 
