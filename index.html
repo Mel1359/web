@@ -2,16 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Форма</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Форма</title> <!--Название вкладки-->
+    <link rel="stylesheet" href="styles.css"> <!--Подключение файла со стилями-->
 </head>
 <body>   
-    <div class="container">
+    <div class="container"> <!--Блок контейнер с классом-->
         <h2>Анкета</h2>
-        <form method="POST" action="/submit">
-            <label for="lastname">Фамилия:</label>
-            <input type="text" id="lastname" name="lastname" required>
+        <form method="POST" action="/submit"> <!--Данные формы будут отправлены методом POST, /submit-URL куда отправляются данные формы-->
+            <label for="lastname">Фамилия:</label> <!--Метка для поля ввода с идентификатором lastname-->
+            <input type="text" id="lastname" name="lastname" required> <!--Поле ввода для фамилии, далее для имениб отчетва и почты-->
             
             <label for="firstname">Имя:</label>
             <input type="text" id="firstname" name="firstname" required>
@@ -22,7 +21,7 @@
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
-            <input type="submit" value="Отправить">
+            <input type="submit" value="Отправить"> <!--Кнопка отправки формы-->
         </form>
     </div>
 </body>
